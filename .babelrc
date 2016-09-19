@@ -1,0 +1,27 @@
+{
+  "env": {
+    "development": {
+      "presets": ["react-hmre", ["es2015", { "modules": false } ], "stage-0", "react"],
+      "plugins" : [
+        "transform-decorators-legacy"
+      ]
+    },
+    "test": {
+      "presets": ["es2015-loose", "stage-0", "react"],
+      "plugins" : [
+        "transform-decorators-legacy"
+      ]
+    },
+    "production": {
+      "presets": ["es2015-loose", "stage-0", "react"],
+      "plugins": [
+        "lodash",
+        "transform-decorators-legacy",
+        "transform-runtime",
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements",
+        "transform-remove-console"
+      ]
+    }
+  }
+}
